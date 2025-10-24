@@ -1,6 +1,10 @@
 // import { useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Avaleht from './pages/Avaleht'
+import Uudised from './pages/Uudised'
+import Kontakt from './pages/Kontakt'
+import Meist from './pages/Meist'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -20,10 +24,10 @@ function App() {
         <button>Info meist</button>
       </Link>
       <Routes>
-        <Route path='' element={<div>See on avaleht, nähtav localhost:5173 aadressil</div>} />
-        <Route path='uudised' element={<div>See on uudiste leht, nähtav localhost:5173/uudised aadressil</div>} />
-        <Route path='kontakt' element={<div>See on kontaktide leht, nähtav localhost:5173/kontakt aadressil</div>} />
-        <Route path='meist' element={<div>See on meist leht, nähtav localhost:5173/meist aadressil</div>} />
+        <Route path='' element={ <Avaleht /> } />
+        <Route path='uudised' element={ <Uudised /> } />
+        <Route path='kontakt' element={ <Kontakt /> } />
+        <Route path='meist' element={ <Meist /> } />
       </Routes>
     </>
   )
